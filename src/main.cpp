@@ -3,7 +3,6 @@
 using namespace std;
 using namespace coroutine;
 void func(Coroutine* s) {
-    //int id = s->running_coroutine();
     for (int i = 0; i <5; ++i) {
         cout<<"正在运行的id"<<s->id()<<":"<<i<<endl;
         s->yield();
@@ -11,7 +10,6 @@ void func(Coroutine* s) {
 }
 
 void func2(Coroutine* s) {
-    //int id = s->running_coroutine();
     for (int i = 0; i <15; ++i) {
         cout<<"正在运行的id"<<s->id()<<":"<<i<<endl;
         s->yield();
